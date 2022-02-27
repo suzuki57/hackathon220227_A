@@ -65,7 +65,10 @@ function App() {
                 <input  placeholder='TODOを入力' value={todoText} onChange={onChangeTodoText}></input>
                 <button onClick={onClickAdd}>やることを追加</button>
             </div>
+            
+            
             <div className='body__todo'>
+            <p className="HaveTo-area">やらなきゃいけない事</p>
                 <ul>
                     {inCompleteTodos.map((todo, index)=>{
                         return(
