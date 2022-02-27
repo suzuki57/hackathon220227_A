@@ -28,8 +28,10 @@ body {
   }
 
   li {
+    padding-top:12px;
     margin-right: 8px;
     list-style: none;
+  
   }
   
   .input-area {
@@ -45,6 +47,7 @@ body {
 
 .HaveTo-area{
     text-align: center;	
+    font-weight: bold;
 
 }
 
@@ -53,7 +56,7 @@ body {
     display: flex;
     width: 400px;
     min-height: 50px;
-    padding: 8px;
+    padding: 10px;
 
     margin-top: 10px;
     margin-left: auto;
@@ -61,8 +64,7 @@ body {
   }
   
 .li{
-    padding-top:auto;
-    padding-bottom:auto;
+    margin-top:auto;
 }
 
 
