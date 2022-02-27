@@ -24,7 +24,7 @@ const [todos, setTodo] = useState(initialState);
       <h1>ToDoリスト</h1>
       <p>タスク追加</p>
         <input type="text" name="name" value="name"/>
-        <input type="button" name="name" value="投稿！！"/>
+        <input type="button" name="name" value="投稿!!"/>
       <ul>
         <li>
           { todos.map((todo, index) => (<li key={ index }>{ todo.task }</li>))}
