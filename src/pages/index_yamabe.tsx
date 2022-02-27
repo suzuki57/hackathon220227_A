@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 
     const updateTodos = ['fafdasfafafda'];
     const newIncompleteTodos_u = [...incompleteTodos, updateTodos];
-    setIncompleteTodos(newIncompleteTodos_u);
+    // setIncompleteTodos(newIncompleteTodos_u);
     // setIncompleteTodos(updateTodos);
   };
 
