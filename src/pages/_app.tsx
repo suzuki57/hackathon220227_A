@@ -1,9 +1,15 @@
 import React,{useState} from 'react';
+import './stylesheet.css'
+// import '../style/globals.css'
 
 
+{/* <head>
+<link href="/dist/output.css" rel="stylesheet">
+
+</head> */}
 function App() {
     const [todoText,setTodoText] =useState("");
-    const [inCompleteTodos, setInCompleteTodos] = useState(["aiueo","アイウエオ"]);
+    const [inCompleteTodos, setInCompleteTodos] = useState(["交通経路の確認","持って行く衣類を選ぶ"]);
     // const[CompleteTodos, setCompleteTodos] = useState(["うううう"])
 
     const onChangeTodoText =(event:any) => setTodoText(event.target.value);
@@ -42,7 +48,7 @@ function App() {
         // newIncompleteTodos.splice(index,1);
     
 
-        const updateTodos = user;
+        const updateTodos:any = user;
         newIncompleteTodos.splice(index,1, updateTodos);
         // const newIncompleteTodos_u = [newIncompleteTodos, updateTodos];
     
@@ -54,20 +60,20 @@ function App() {
   return (
     <div className="app">
         <div className=''>
-            <h1 className=''>My TodoList</h1>
-            <div>
+            <h1 className='title'>淡路島 引っ越し準備</h1>
+            <div className='input-area'>
                 <input  placeholder='TODOを入力' value={todoText} onChange={onChangeTodoText}></input>
-                <button onClick={onClickAdd}>追加</button>
+                <button onClick={onClickAdd}>やることを追加</button>
             </div>
             <div className='body__todo'>
                 <ul>
                     {inCompleteTodos.map((todo, index)=>{
                         return(
-                            <div key={todo}>
+                            <div key={todo} className="incomplete-area">
                                 <li>{todo}</li>
                                 {/* <button onClick ={() => onClickComplete(index)}>完了</button> */}
-                                <button onClick={() =>onClickDelete(index)}>削除</button>
-                                <button  onClick={() =>onClickUpdate(index)}>編集</button>
+                                <button onClick={() =>onClickDelete(index)}>削除する</button>
+                                <button  onClick={() =>onClickUpdate(index)}>変更する</button>
                             </div>
                         );
                     })}
